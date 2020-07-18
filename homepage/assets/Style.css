@@ -37,6 +37,7 @@
     bottom: 0;
     background-image: url("images/bgImageCorrect.jpg");
     background-size:cover;
+    background-repeat:no-repeat;
     z-index: -2; 
 }
 nav{
@@ -97,6 +98,7 @@ nav{
 }
 .content{
     margin-top:13rem;
+    height:65%;
 }
 .underline{
     width:124px;
@@ -113,8 +115,10 @@ nav{
 .status{
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.45);
-    width:27.6rem;
-    height:9.13rem;
+    /* width:27.6rem; */
+    width:34%;
+    /* height:9.13rem; */
+    height:22%;
     border-radius:20px;
     margin: 25px 0;
     display:flex;
@@ -123,13 +127,14 @@ nav{
 }
 .icon{
     width:30%;
+    height:70%;
     text-align: center;
     border-right:1px solid white;
     /* opacity: 1; */
 }
 .icon>svg{
-    width:4.9rem;
-    height:4.9rem;
+    width:100%;
+    height:100%;
     fill:white;
 }
 .number-container{
@@ -138,7 +143,7 @@ nav{
     flex-direction:column;
     justify-content: flex-start;
     /* align-items:center; */
-    height:4.9rem;
+    height:60%;
     margin-left:5%;
 }
 .sub-heading, .numbers{
@@ -180,5 +185,42 @@ nav{
     }
     .ham-menu{
         display:block;
+    }
+    .heading>p{
+        font-size:3rem;
+    }
+    .status{
+        width:25rem;
+        height:8.5rem;
+    }
+}
+@media only screen and (max-width:600px) {
+    .heading>p{
+        font-size:2.5rem;
+    }
+    .status{
+        width:23rem;
+        height:7rem;
+    }
+    .sub-heading{
+        font-size: 1rem;
+    }
+    .numbers{
+        font-size:2.5rem;
+    }
+}
+@media only screen and (max-width:500px) {
+    .heading>p{
+        font-size:1.7rem;
+    }
+    .sub-heading{
+        font-size: 0.7rem;
+    }
+    .numbers{
+        font-size:1.3rem;
+    }
+    .status{
+        width:20rem;
+        height:5rem;
     }
 }
