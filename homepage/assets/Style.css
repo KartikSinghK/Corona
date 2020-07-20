@@ -37,6 +37,7 @@
     bottom: 0;
     background-image: url("images/bgImageCorrect.jpg");
     background-size:cover;
+    background-position-x: right;
     background-repeat:no-repeat;
     z-index: -2; 
 }
@@ -97,11 +98,18 @@ nav{
     color:#EE6C6B !important;
 }
 .content{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
     margin-top:13rem;
     height:65%;
 }
+.heading{
+    display:flex;
+    flex-direction:column;
+}
 .underline{
-    width:124px;
+    width:124px;;
     height:7px;
     background:#EE6C6B;
     border-radius:3px;
@@ -115,12 +123,10 @@ nav{
 .status{
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.45);
-    /* width:27.6rem; */
-    width:34%;
-    /* height:9.13rem; */
+    width:26%;
     height:22%;
     border-radius:20px;
-    margin: 25px 0;
+    margin: 20px 0;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -130,11 +136,10 @@ nav{
     height:70%;
     text-align: center;
     border-right:1px solid white;
-    /* opacity: 1; */
 }
 .icon>svg{
-    width:100%;
-    height:100%;
+    width:90%;
+    height:90%;
     fill:white;
 }
 .number-container{
@@ -142,7 +147,6 @@ nav{
     display:flex;
     flex-direction:column;
     justify-content: flex-start;
-    /* align-items:center; */
     height:60%;
     margin-left:5%;
 }
@@ -178,6 +182,10 @@ nav{
     #links>a{
         font-size:1rem;
     }
+    .status{
+        width:25rem;
+        height:8.5rem;
+    }
 }
 @media only screen and (max-width:1024px) {
     #links{
@@ -189,10 +197,13 @@ nav{
     .heading>p{
         font-size:3rem;
     }
-    .status{
-        width:25rem;
-        height:8.5rem;
+    .content{
+        align-items:flex-end;
     }
+    .heading{
+        align-items:flex-end;
+    }
+
 }
 @media only screen and (max-width:600px) {
     .heading>p{
@@ -208,6 +219,17 @@ nav{
     .numbers{
         font-size:2.5rem;
     }
+    #logo{
+        width:3rem;
+        height:3rem;
+    }
+    #logo>p{
+        font-size:0.9rem;
+    }
+    .ham-menu>svg{
+        width:2rem;
+        height:2rem;
+    }
 }
 @media only screen and (max-width:500px) {
     .heading>p{
@@ -222,5 +244,19 @@ nav{
     .status{
         width:20rem;
         height:5rem;
+    }
+}
+@media only screen and (max-width:400px) {
+    .content{
+        align-items:center;
+        margin-top:170px;
+    }
+    .status{
+        width:15rem;
+        height:5rem;
+        margin:8px 0;
+    }
+    .heading>p{
+        font-size:1.4rem;
     }
 }
